@@ -11,12 +11,15 @@ import unittest
 try:
     from setuptools import Extension
     from setuptools import setup
+    from setuptools.command.build_ext import build_ext
+    from setuptools import errors
+    from setuptools import dep_util
 except:
     from distutils.core import Extension
     from distutils.core import setup
-from distutils.command.build_ext import build_ext
-from distutils import errors
-from distutils import dep_util
+    from distutils.command.build_ext import build_ext
+    from distutils import errors
+    from distutils import dep_util
 from distutils import log
 
 
