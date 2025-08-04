@@ -85,12 +85,24 @@ jobs:
             cmake_config: Release
             os: windows-latest
 
+          - name: cmake-winarm64:msvc-rel
+            build_system: cmake
+            cmake_generator: Visual Studio 17 2022
+            cmake_config: Release
+            os: windows-11-arm
+
           - name: cmake-win64:msvc-dbg
             build_system: cmake
             cmake_generator: Visual Studio 17 2022
             cmake_config: Debug
             os: windows-latest
 
+          - name: cmake-winarm64:msvc-dbg
+            build_system: cmake
+            cmake_generator: Visual Studio 17 2022
+            cmake_config: Debug
+            os: windows-11-arm
+          
           - name: fuzz:clang
             build_system: fuzz
             c_compiler: clang
