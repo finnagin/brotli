@@ -165,6 +165,11 @@ jobs:
             bazel_project: .
             os: windows-latest
 
+          - name: bazel-win-arm64:root
+            build_system: bazel
+            bazel_project: .
+            os: windows-11-arm
+          
           # TODO(eustas): restore when go is fixed
           #- name: bazel-win:go
           #  build_system: bazel
@@ -181,6 +186,11 @@ jobs:
             build_system: bazel
             bazel_project: research
             os: windows-latest
+
+          - name: bazel-win-arm64:research
+            build_system: bazel
+            bazel_project: research
+            os: windows-11-arm
 
     env:
       CC: ${{ matrix.c_compiler || 'gcc' }}
